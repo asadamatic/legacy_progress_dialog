@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:progress_dialog/progress_dialog.dart';
+import 'package:progress_dialog/legacy_progress_dialog.dart';
 
 class ExampleScreen extends StatefulWidget {
   @override

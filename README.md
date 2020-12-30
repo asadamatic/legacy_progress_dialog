@@ -3,7 +3,6 @@
 Helps developers improve user-experience using a progress indicator and a loading message.
 
 ### Example
-[Example](https://github.com/asadamatic/Progress-Dialog/blob/master/example/example.dart)
 <Img src="closed.png" height="300em" />
 
 <Img src="open.png" height="300em" />
