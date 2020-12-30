@@ -1,14 +1,33 @@
 # progress_dialog
 
-Helps developers improve user-experiece using a progress indicator and a loading message.
+Helps developers improve user-experience using a progress indicator and a loading message.
+
+### Example
+[Example](https://github.com/asadamatic/Progress-Dialog/blob/master/example/example.dart)
+<Img src="closed.png" height="300em" />
+
+<Img src="open.png" height="300em" />
 
 ## Getting Started
+ ### Install
+Add dependency to pubspec.yaml file :
+`progress_dialog: 0.0.1`
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Run this command :
+`$ flutter pub get`
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+### Import
+Import class in your project :
+`import 'package:progress_dialog/progress_dialog.dart';`
+
+### Show progress dialog :
+
+```
+ProgressDialog progressDialog = ProgressDialog(
+                  context: context,
+                  backgroundColor: Colors.blue,
+                );
+
+	progressDialog.show(); // show dialog
+	progressDialog.dismiss(); //close dialog
+```

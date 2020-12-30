@@ -1,7 +1,7 @@
 name: progress_dialog
 description: Helps developers improve user-experiece using a progress indicator and a loading message.
 version: 0.0.1
-homepage: https://github.com/asadamatic/Progrss-Dialog
+homepage: https://github.com/asadamatic/Progrss-DAZQialog
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
