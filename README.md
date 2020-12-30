@@ -3,10 +3,10 @@
 Helps developers improve user-experience using a progress indicator and a loading message.
 
 ### Example
+<Img src="https://raw.githubusercontent.com/asadamatic/Progress-Dialog/master/closed.png" height="300em" />
 
-![Example][1]
 
-![Example][2]
+<Img src="https://raw.githubusercontent.com/asadamatic/Progress-Dialog/master/open.png" height="300em" />
 
 ## Getting Started
  ### Install
@@ -31,7 +31,3 @@ ProgressDialog progressDialog = ProgressDialog(
 	progressDialog.show(); // show dialog
 	progressDialog.dismiss(); //close dialog
 ```
-
-
-[1]:https://https://github.com/asadamatic/Progress-Dialog/blob/master/closed.png?raw=true
-[2]:https://https://github.com/asadamatic/Progress-Dialog/blob/master/open.png?raw=true
