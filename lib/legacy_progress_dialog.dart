@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 //ignore: must_be_immutable
 class ProgressDialog extends StatelessWidget {
-
   final BuildContext context;
   final String loadingText;
-  final Color backgroundColor, textColor, progressIndicatorColor, backgroundOverlay;
+  final Color backgroundColor,
+      textColor,
+      progressIndicatorColor,
+      backgroundOverlay;
   final LinearGradient linearGradient;
   final String assetImageName, networkImageUrl;
 
@@ -15,15 +17,24 @@ class ProgressDialog extends StatelessWidget {
 
   bool isShowing = false;
 
-  ProgressDialog({@required this.context, this.loadingText = 'Loading...', @required this.backgroundColor, this.backgroundOverlay = Colors.white, this.textColor = Colors.white, this.linearGradient, this.assetImageName, this.networkImageUrl, this.progressIndicatorColor = Colors.white}) :
-
-        assert(backgroundColor != null || linearGradient != null, 'This widget either needs a background color or background linear gradient\n'),
-
-        assert(backgroundColor == null || linearGradient == null, 'Cannot provide both a backgroundColor and a linearGradient\n'),
-
-        assert(assetImageName == null || networkImageUrl == null, 'Cannot provide both a assetImageName and a networkImageUrl\n'),
-
-        assert(loadingText.length <= 55 , 'Loading text should not be more than 50 characters\n');
+  ProgressDialog(
+      {@required this.context,
+      this.loadingText = 'Loading...',
+      @required this.backgroundColor,
+      this.backgroundOverlay = Colors.white,
+      this.textColor = Colors.white,
+      this.linearGradient,
+      this.assetImageName,
+      this.networkImageUrl,
+      this.progressIndicatorColor = Colors.white})
+      : assert(backgroundColor != null || linearGradient != null,
+            'This widget either needs a background color or background linear gradient\n'),
+        assert(backgroundColor == null || linearGradient == null,
+            'Cannot provide both a backgroundColor and a linearGradient\n'),
+        assert(assetImageName == null || networkImageUrl == null,
+            'Cannot provide both a assetImageName and a networkImageUrl\n'),
+        assert(loadingText.length <= 55,
+            'Loading text should not be more than 50 characters\n');
 
   void dismiss() {
     if (isShowing) {
@@ -32,8 +43,7 @@ class ProgressDialog extends StatelessWidget {
     }
   }
 
-  void initializeProgress(){
-
+  void initializeProgress() {
     progressDialog = ProgressDialog(
       context: context,
       backgroundColor: backgroundColor,
@@ -71,7 +81,8 @@ class ProgressDialog extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+              padding:
+                  const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
               alignment: Alignment.centerLeft,
               width: MediaQuery.of(context).size.width * .8,
               decoration: BoxDecoration(
@@ -89,13 +100,18 @@ class ProgressDialog extends StatelessWidget {
                         alignment: Alignment.center,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(10.0),
-                          child:  assetImageName != null || networkImageUrl != null ? Image(
-                            image: assetImageName != null ? AssetImage(assetImageName) : NetworkImage(networkImageUrl),
-                            fit: BoxFit.contain,
-                            height: 22.5,
-                            width: 22.5,
-                            alignment: Alignment.bottomCenter,
-                          ) : SizedBox(width: 0.0, height: 0.0),
+                          child:
+                              assetImageName != null || networkImageUrl != null
+                                  ? Image(
+                                      image: assetImageName != null
+                                          ? AssetImage(assetImageName)
+                                          : NetworkImage(networkImageUrl),
+                                      fit: BoxFit.contain,
+                                      height: 22.5,
+                                      width: 22.5,
+                                      alignment: Alignment.bottomCenter,
+                                    )
+                                  : SizedBox(width: 0.0, height: 0.0),
                         ),
                       ),
                       Align(
@@ -106,9 +122,14 @@ class ProgressDialog extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Expanded(child: Padding(
+                  Expanded(
+                      child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                    child: Text('${loadingText ?? ''}', style: TextStyle(letterSpacing: .9, color: textColor, fontSize: 16.0),),
+                    child: Text(
+                      '${loadingText ?? ''}',
+                      style: TextStyle(
+                          letterSpacing: .9, color: textColor, fontSize: 16.0),
+                    ),
                   )),
                 ],
               ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:progress_dialog/legacy_progress_dialog.dart';
+import 'package:legacy_progress_dialog/legacy_progress_dialog.dart';
 
 class ExampleScreen extends StatefulWidget {
   @override
@@ -19,19 +19,19 @@ class _ExampleScreenState extends State<ExampleScreen> {
         ),
         body: Center(
             child: FlatButton(
-              child: Text('Show Progress Dialog'),
-              textColor: Colors.white,
-              color: Colors.blue,
-              onPressed: () {
+          child: Text('Show Progress Dialog'),
+          textColor: Colors.white,
+          color: Colors.blue,
+          onPressed: () {
+            ProgressDialog progressDialog = ProgressDialog(
+              context: context,
+              backgroundColor: Colors.blue,
+            );
 
-                ProgressDialog progressDialog = ProgressDialog(
-                  context: context,
-                  backgroundColor: Colors.blue,
-                );
-
-                progressDialog.show();
-                Future.delayed(Duration(seconds: 3)).then((value) => progressDialog.dismiss());
-              },
-            )));
+            progressDialog.show();
+            Future.delayed(Duration(seconds: 3))
+                .then((value) => progressDialog.dismiss());
+          },
+        )));
   }
 }
