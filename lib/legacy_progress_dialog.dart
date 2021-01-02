@@ -19,10 +19,10 @@ class ProgressDialog extends StatelessWidget {
 
   ProgressDialog(
       {@required this.context,
-      this.loadingText,
+      this.loadingText = 'Loading...',
       this.backgroundColor,
       this.backgroundOverlay = Colors.white,
-      this.textColor = Colors.white,
+      @required this.textColor,
       this.linearGradient,
       this.assetImageName,
       this.networkImageUrl,
@@ -35,7 +35,9 @@ class ProgressDialog extends StatelessWidget {
             'Cannot provide both a assetImageName and a networkImageUrl\n'),
         assert(loadingText.length <= 55,
             'Loading text should not be more than 50 characters\n'),
-        assert(loadingText != null, 'Loading text should no be null\n');
+        assert(loadingText != null, 'Loading text should no be null\n'),
+        assert(textColor != null, 'textColor is required\n')
+  ;
 
   void dismiss() {
     if (isShowing) {
@@ -47,9 +49,11 @@ class ProgressDialog extends StatelessWidget {
   void initializeProgress() {
     progressDialog = ProgressDialog(
       context: context,
+      loadingText: loadingText,
       backgroundColor: backgroundColor,
       textColor: textColor,
       linearGradient: linearGradient,
+      backgroundOverlay: backgroundOverlay,
       progressIndicatorColor: progressIndicatorColor,
       assetImageName: assetImageName,
       networkImageUrl: networkImageUrl,

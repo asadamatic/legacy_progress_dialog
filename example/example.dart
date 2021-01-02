@@ -26,6 +26,7 @@ class _ExampleScreenState extends State<ExampleScreen> {
             ProgressDialog progressDialog = ProgressDialog(
               context: context,
               backgroundColor: Colors.blue,
+              textColor: Colors.white,
             );
 
             progressDialog.show();
