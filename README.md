@@ -3,9 +3,9 @@
 Helps developers improve user-experience using a progress indicator and a loading message.
 
 ## Getting Started
- ### Install
+### Install
 Add dependency to pubspec.yaml file :
-`legacy_progress_dialog: 0.0.8`
+`legacy_progress_dialog: ^0.0.8`
 
 Run this command :
 `$ flutter pub get`
@@ -18,12 +18,15 @@ Import class in your project :
 <Img src="https://raw.githubusercontent.com/asadamatic/Progress-Dialog/master/open.png" align = "top" height = "350" height="300em" />
 
 ```
+//Create an instance of ProgressDialog
 ProgressDialog progressDialog = ProgressDialog(
                   context: context,
                   backgroundColor: Colors.blue,
                   textColor: Colors.White,
                 );
+// show dialog
+progressDialog.show();
 
-progressDialog.show(); // show dialog
-progressDialog.dismiss(); //close dialog
+//close dialog
+progressDialog.dismiss();
 ```
