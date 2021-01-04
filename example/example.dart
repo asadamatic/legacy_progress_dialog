@@ -15,7 +15,6 @@ class _ExampleScreenState extends State<ExampleScreen> {
           centerTitle: true,
           brightness: Brightness.dark,
           backgroundColor: Colors.blue,
-          titleTextStyle: TextStyle(color: Colors.white),
         ),
         body: Center(
             child: FlatButton(

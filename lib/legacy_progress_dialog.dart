@@ -36,8 +36,7 @@ class ProgressDialog extends StatelessWidget {
         assert(loadingText.length <= 55,
             'Loading text should not be more than 50 characters\n'),
         assert(loadingText != null, 'Loading text should no be null\n'),
-        assert(textColor != null, 'textColor is required\n')
-  ;
+        assert(textColor != null, 'textColor is required\n');
 
   void dismiss() {
     if (isShowing) {
