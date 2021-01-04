@@ -30,4 +30,8 @@
 
 * An easy to use progress indicator dialog.
 
+## [0.0.9] - 2020-12-4
+
+* An easy to use progress indicator dialog.
+
 
