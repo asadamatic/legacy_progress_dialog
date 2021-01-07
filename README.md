@@ -5,7 +5,7 @@ Helps developers improve user-experience using a progress indicator and a loadin
 ## Getting Started
 ### Install
 Add dependency to pubspec.yaml file :
-`legacy_progress_dialog: ^0.0.8`
+`legacy_progress_dialog: ^0.0.9`
 
 Run this command :
 `$ flutter pub get`
