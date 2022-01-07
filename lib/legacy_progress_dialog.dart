@@ -6,23 +6,23 @@ import 'package:flutter/material.dart';
 class ProgressDialog extends StatelessWidget {
   final BuildContext context;
   final String loadingText;
-  final Color backgroundColor,
+  final Color? backgroundColor,
       textColor,
       progressIndicatorColor,
       backgroundOverlay;
-  final LinearGradient linearGradient;
-  final String assetImageName, networkImageUrl;
+  final LinearGradient? linearGradient;
+  final String? assetImageName, networkImageUrl;
 
-  ProgressDialog progressDialog;
+  ProgressDialog? progressDialog;
 
   bool isShowing = false;
 
   ProgressDialog(
-      {@required this.context,
+      {required this.context,
       this.loadingText = 'Loading...',
       this.backgroundColor,
       this.backgroundOverlay = Colors.white,
-      @required this.textColor,
+      required Color this.textColor,
       this.linearGradient,
       this.assetImageName,
       this.networkImageUrl,
@@ -50,7 +50,7 @@ class ProgressDialog extends StatelessWidget {
       context: context,
       loadingText: loadingText,
       backgroundColor: backgroundColor,
-      textColor: textColor,
+      textColor: textColor!,
       linearGradient: linearGradient,
       backgroundOverlay: backgroundOverlay,
       progressIndicatorColor: progressIndicatorColor,
@@ -67,8 +67,8 @@ class ProgressDialog extends StatelessWidget {
         useSafeArea: true,
         context: context,
         barrierDismissible: false,
-        builder: (context) => progressDialog,
-        barrierColor: backgroundOverlay.withOpacity(.2),
+        builder: (context) => progressDialog!,
+        barrierColor: backgroundOverlay!.withOpacity(.2),
       );
     }
   }
@@ -107,9 +107,9 @@ class ProgressDialog extends StatelessWidget {
                           child:
                               assetImageName != null || networkImageUrl != null
                                   ? Image(
-                                      image: assetImageName != null
-                                          ? AssetImage(assetImageName)
-                                          : NetworkImage(networkImageUrl),
+                                      image: (assetImageName != null
+                                          ? AssetImage(assetImageName!)
+                                          : NetworkImage(networkImageUrl!)) as ImageProvider<Object>,
                                       fit: BoxFit.contain,
                                       height: 22.5,
                                       width: 22.5,

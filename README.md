@@ -2,6 +2,10 @@
 
 Helps developers improve user-experience using a progress indicator and a loading message.
 
+# Deprecation warning
+
+## Now embedded in [`dialogs`](https://pub.dev/packages/legacy_progress_dialog)
+
 ## Getting Started
 ### Install
 Add dependency to pubspec.yaml file :
