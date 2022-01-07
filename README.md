@@ -4,7 +4,7 @@ Helps developers improve user-experience using a progress indicator and a loadin
 
 # Deprecation warning
 
-## Now embedded in [`dialogs`](https://pub.dev/packages/legacy_progress_dialog)
+## Now embedded in [`dialogs`](https://pub.dev/packages/dialogs)
 
 ## Getting Started
 ### Install

@@ -1,6 +1,6 @@
 name: legacy_progress_dialog
 description: Helps developers improve user-experiece using a progress indicator and a loading message.
-version: 0.1.0 #Also add new release details in CHANGELOG.md
+version: 0.1.1 #Also add new release details in CHANGELOG.md
 homepage: https://github.com/asadamatic/Progress-Dialog
 
 environment:

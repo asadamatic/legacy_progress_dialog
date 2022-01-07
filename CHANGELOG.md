@@ -40,3 +40,6 @@
 * Now embedded in [`dialogs`](https://pub.dev/packages/legacy_progress_dialog)
 
 
+## [0.1.1] - 2022-01-07
+
+* Correcting readme.md
